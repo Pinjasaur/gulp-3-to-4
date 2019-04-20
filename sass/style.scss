@@ -1,0 +1,5 @@
+body {
+  // Sass-style comments
+  display: flex; // Needs prefix with IE 10 (specified in package.json)
+  background-color: rgba(#bada55, .5); // Sass supports 2 args
+}

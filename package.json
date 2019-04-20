@@ -1,0 +1,20 @@
+{
+  "name": "gulp324",
+  "version": "1.0.0",
+  "description": "Migrating a basic Gulpfile from v3 to v4.",
+  "author": "Paul Esch-Laurent <p@uly.io>",
+  "license": "MIT",
+  "private": true,
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "ie 10"
+  ],
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
