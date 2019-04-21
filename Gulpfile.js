@@ -1,20 +1,23 @@
-var gulp = require("gulp"),
-    plugins = require("gulp-load-plugins")();
+const { src, dest, watch, series } = require("gulp")
+const plugins = require("gulp-load-plugins")()
 
 // Compile & autoprefix the SCSS
-gulp.task("build:sass", function () {
-  return gulp
-    .src("sass/*.scss")
+const sass = () => {
+  return src("sass/*.scss")
     .pipe(plugins.plumber())
     .pipe(plugins.sass())
     .pipe(plugins.autoprefixer())
-    .pipe(gulp.dest("css/"));
-});
+    .pipe(dest("css/"));
+}
 
-// Watch for changes and rebuild CSS
-gulp.task("watch", function () {
-  gulp.watch("sass/**.scss", gulp.series("build:sass"));
-});
+// `export` makes it public (from the CLI)
+exports.sass = sass
+
+// Watch for changes and rebuild CSS (Note single task)
+const watcher = () => watch("sass/**.scss", sass)
+
+// `export` makes it public (from the CLI)
+exports.watch = watcher
 
 // Set default task
-gulp.task("default", gulp.series("watch"));
+exports.default = series(watcher)
