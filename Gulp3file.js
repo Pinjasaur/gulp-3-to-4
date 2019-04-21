@@ -13,8 +13,8 @@ gulp.task("build:sass", function () {
 
 // Watch for changes and rebuild CSS
 gulp.task("watch", function () {
-  gulp.watch("sass/**.scss", gulp.series("build:sass"));
+  gulp.watch("sass/**.scss", ["build:sass"]);
 });
 
 // Set default task
-gulp.task("default", gulp.series("watch"));
+gulp.task("default", ["watch"]);
