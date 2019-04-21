@@ -9,6 +9,6 @@ npm install gulp
 which is incompatible with Gulp 3 Gulpfiles.
 
 This repository is a reference for converting a minimal Gulp 3 Gulpfile to a
-Gulp 4 Gulpfile. It is accompanied by a blog post.
+Gulp 4 Gulpfile. It is accompanied by a [blog post](https://paul.af/working-with-gulp-4).
 
 The environment I wrote this used Node.js v10 & npm v6.
